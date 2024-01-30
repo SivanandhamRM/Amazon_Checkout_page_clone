@@ -12,6 +12,7 @@ import {
   deliveryOptions,
   getDeliveryOption,
 } from "../../data/deliveryOptions.js";
+import { renderPaymentSummary } from "./paymentSummary.js";
 
 export function renderOrderSummary() {
   let cartSummaryHTML = "";
@@ -134,6 +135,7 @@ export function renderOrderSummary() {
       container.remove();
 
       updateCartQuantity();
+      renderPaymentSummary();
     });
   });
 
@@ -162,11 +164,6 @@ export function renderOrderSummary() {
     link.addEventListener("click", () => {
       const productId = link.dataset.productId;
 
-      // Here's an example of a feature we can add: validation.
-      // Note: we need to move the quantity-related code up
-      // because if the new quantity is not valid, we should
-      // return early and NOT run the rest of the code. This
-      // technique is called an "early return".
       const quantityInput = document.querySelector(
         `.js-quantity-input-${productId}`
       );
@@ -197,6 +194,7 @@ export function renderOrderSummary() {
       const { productId, deliveryOptionId } = element.dataset;
       updateDeliveryOption(productId, deliveryOptionId);
       renderOrderSummary();
+      renderPaymentSummary();
     });
   });
 }
