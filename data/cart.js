@@ -55,14 +55,18 @@ export function removeFromCart(productId) {
   saveToStorage();
 }
 
-export function calculateCartQuantity() {
-  let cartQuantity = 0;
+export function updateDeliveryOption(productId, deliveryOptionId) {
+  let matchingItem;
 
   cart.forEach((cartItem) => {
-    cartQuantity += cartItem.quantity;
+    if (productId === cartItem.productId) {
+      matchingItem = cartItem;
+    }
   });
 
-  return cartQuantity;
+  matchingItem.deliveryOptionId = deliveryOptionId;
+
+  saveToStorage();
 }
 
 export function updateQuantity(productId, newQuantity) {
@@ -75,20 +79,6 @@ export function updateQuantity(productId, newQuantity) {
   });
 
   matchingItem.quantity = newQuantity;
-
-  saveToStorage();
-}
-
-export function updateDeliveryOption(productId, deliveryOptionId) {
-  let matchingItem;
-
-  cart.forEach((cartItem) => {
-    if (productId === cartItem.productId) {
-      matchingItem = cartItem;
-    }
-  });
-
-  matchingItem.deliveryOptionId = deliveryOptionId;
 
   saveToStorage();
 }
