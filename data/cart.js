@@ -21,6 +21,7 @@ function saveToStorage() {
 
 export function addToCart(productId) {
   let matchingItem;
+  let addedMessageTimeoutId;
 
   cart.forEach((cartItem) => {
     if (productId === cartItem.productId) {
@@ -28,15 +29,37 @@ export function addToCart(productId) {
     }
   });
 
+  const quantitySelector = document.querySelector(
+    `.js-quantity-selector-${productId}`
+  );
+  const quantity = Number(quantitySelector.value);
+
   if (matchingItem) {
-    matchingItem.quantity += 1;
+    matchingItem.quantity += quantity;
   } else {
     cart.push({
       productId: productId,
-      quantity: 1,
+      quantity: quantity,
       deliveryOptionId: "1",
     });
   }
+
+  const addedMessage = document.querySelector(`.js-added-to-cart-${productId}`);
+
+  addedMessage.classList.add("added-to-cart-visible");
+
+  // Check if a previous timeoutId exists. If it does,
+  // we will stop it.
+  if (addedMessageTimeoutId) {
+    clearTimeout(addedMessageTimeoutId);
+  }
+
+  const timeoutId = setTimeout(() => {
+    addedMessage.classList.remove("added-to-cart-visible");
+  }, 2000);
+
+  // Save the timeoutId so we can stop it later.
+  addedMessageTimeoutId = timeoutId;
 
   saveToStorage();
 }
