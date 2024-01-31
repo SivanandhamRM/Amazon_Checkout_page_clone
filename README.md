@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a clone of the Amazon product display and checkout page, created using HTML, CSS, and JavaScript. It aims to replicate the user interface and functionality of the Amazon website.
+This project is a clone of the Amazon product display and checkout page, created using HTML, CSS, and JavaScript. It aims to replicate the basic user interface and functionality of the Amazon website.
 
 ## Features
 
