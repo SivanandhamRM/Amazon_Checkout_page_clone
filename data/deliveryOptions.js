@@ -1,5 +1,6 @@
 import dayjs from "https://unpkg.com/dayjs@1.11.10/esm/index.js";
 
+// list of objects for delivery options
 export const deliveryOptions = [
   {
     id: "1",
@@ -18,6 +19,7 @@ export const deliveryOptions = [
   },
 ];
 
+//function to return the matching delivery option id
 export function getDeliveryOption(deliveryOptionId) {
   let deliveryOption;
 
@@ -30,6 +32,7 @@ export function getDeliveryOption(deliveryOptionId) {
   return deliveryOption;
 }
 
+//exclude Saturday and Sunday for the delivery days
 function isWeekend(date) {
   const dayOfWeek = date.format("dddd");
   return dayOfWeek === "Saturday" || dayOfWeek === "Sunday";
@@ -44,8 +47,6 @@ export function calculateDeliveryDate(deliveryOption) {
 
     if (!isWeekend(deliveryDate)) {
       remainingDays--;
-      // This is a shortcut for:
-      // remainingDays = remainingDays - 1;
     }
   }
 

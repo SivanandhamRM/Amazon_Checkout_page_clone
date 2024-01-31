@@ -1,5 +1,6 @@
 export let cart = JSON.parse(localStorage.getItem("cart"));
 
+//default cart if no cart exists
 if (!cart) {
   cart = [
     {
@@ -19,6 +20,7 @@ function saveToStorage() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+//function to add the product to cart with selected quantity
 export function addToCart(productId) {
   let matchingItem;
   let addedMessageTimeoutId;

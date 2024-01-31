@@ -16,6 +16,7 @@ import {
 import { renderPaymentSummary } from "./paymentSummary.js";
 import { renderCheckoutHeader } from "./checkoutHeader.js";
 
+//function to generate HTML for cart summary in checkout page
 export function renderOrderSummary() {
   let cartSummaryHTML = "";
 
@@ -50,7 +51,6 @@ export function renderOrderSummary() {
             </div>
             <div class="product-quantity">
               <span>
-                <!-- This code was copied from the solutions of exercises 14f - 14n. -->
                 Quantity: <span class="quantity-label js-quantity-label-${
                   matchingProduct.id
                 }">${cartItem.quantity}</span>
@@ -143,7 +143,6 @@ export function renderOrderSummary() {
     });
   });
 
-  // This code was copied from the solutions of exercises 14f - 14n.
   document.querySelectorAll(".js-update-link").forEach((link) => {
     link.addEventListener("click", () => {
       const productId = link.dataset.productId;
@@ -173,18 +172,6 @@ export function renderOrderSummary() {
       renderCheckoutHeader();
       renderOrderSummary();
       renderPaymentSummary();
-
-      // We can delete the code below (from the original solution)
-      // because instead of using the DOM to update the page directly
-      // we can use MVC and re-render everything. This will make sure
-      // the page always matches the data.
-
-      // const quantityLabel = document.querySelector(
-      //   `.js-quantity-label-${productId}`
-      // );
-      // quantityLabel.innerHTML = newQuantity;
-
-      // updateCartQuantity();
     });
   });
 }
