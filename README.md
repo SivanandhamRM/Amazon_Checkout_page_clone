@@ -32,7 +32,7 @@ This project is a clone of the Amazon product display and checkout page, created
 
 4. This will open the project in your default web browser with Live Server, allowing you to see the Amazon product display and checkout page clone.
 
-## Installation
+## Note:
 
 `amazon.html` and `checkout.html` are working web pages for this project.
 `order.html` and `tracking.html` are work in progress.
