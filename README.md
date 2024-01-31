@@ -54,3 +54,7 @@ Screenshots showcasing various features in the Amazon checkout project have been
 5. **Delivery Option Change in Cart and Payment Summary:**
    - Illustrating the process of changing the delivery option in the cart and the corresponding update in the payment summary.
      ![Delivery Option Change and Payment Summary](screenshots/amazon_delivery_option_change.png)
+
+6. **Sample Cart with Different Products and Payment Summary:**
+   - Displaying a sample cart with a variety of products and their payment summaries, showcasing the calculations before and after tax.
+     ![Sample Cart and Payment Summary](screenshots/amazon_order_and_payment_summary.png)
