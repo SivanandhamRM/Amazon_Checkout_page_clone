@@ -37,20 +37,20 @@ Screenshots showcasing various features in the Amazon checkout project have been
 
 1. **Amazon Products Display Page with Quantity Selector:**
    - Displaying multiple products with a quantity selector for each item.
-   - ![Amazon Products Display Page](screenshots/amazon_products_with_quantity_selector.png)
+     ![Amazon Products Display Page](screenshots/amazon_products_with_quantity_selector.png)
 
 2. **'Added' Text Message Timeout:**
    - Showing an 'Added' text message with a timeout when the "Add to Cart" button is clicked.
-   - ![Added Text Message](screenshots/amazon_Added_timeout.png)
+     ![Added Text Message](screenshots/amazon_Added_timeout.png)
 
 3. **Amazon Checkout Page:**
    - Overview of the Amazon checkout page layout.
-   - ![Amazon Checkout Page](screenshots/amazon_checkout_page.png)
+     ![Amazon Checkout Page](screenshots/amazon_checkout_page.png)
 
 4. **Update Quantity and Save Button Feature:**
    - Demonstrating the functionality to update the quantity of items and a save button on the checkout page.
-   - ![Update Quantity and Save Button](screenshots/amazon_input_save_button.png)
+     ![Update Quantity and Save Button](screenshots/amazon_input_save_button.png)
 
 5. **Delivery Option Change in Cart and Payment Summary:**
    - Illustrating the process of changing the delivery option in the cart and the corresponding update in the payment summary.
-   - ![Delivery Option Change and Payment Summary](screenshots/amazon_delivery_option_change.png)
+     ![Delivery Option Change and Payment Summary](screenshots/amazon_delivery_option_change.png)
